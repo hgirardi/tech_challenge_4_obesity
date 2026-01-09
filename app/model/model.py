@@ -33,7 +33,7 @@ class Model:
 
         # variáveis do modelo
         self.pipe = None
-        self.data = None
+        self.dados_processados = None
         self.X = None
         self.y = None
         self.X_train = None
@@ -87,15 +87,15 @@ class Model:
                 self.data_status = 'arquivo_csv_carregado'
                 logger.info(f"Dados carregados do arquivo CSV.")
                 
-                self.data = self.processar_dados(df)
+                self.dados_processados = self.processar_dados(df)
                 logger.info(f"Features processadas.")
                                 
-                self.y = self.criar_target_binario(self.data)
+                self.y = self.criar_target_binario(self.dados_processados)
                 logger.info(f"Target criado.")
                 self.data_status = 'dados_completos'
                 
                 # Criar X apenas com as features escolhidas
-                self.X = self.data[self.retornar_features_escolhidas()]
+                self.X = self.dados_processados[self.retornar_features_escolhidas()]
                 logger.info(f"Features escolhidas.")
 
                 # Split estratificado
@@ -114,7 +114,7 @@ class Model:
 
                 joblib_file = {
                     'pipeline': self.pipe
-                    , 'dados_processados': self.data
+                    , 'dados_processados': self.dados_processados
                     , 'X':self.X
                     , 'y':self.y
                     , 'X_train':self.X_train
