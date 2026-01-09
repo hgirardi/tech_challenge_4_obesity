@@ -1,0 +1,33 @@
+[[items]]
+type = "page"
+label = "Home"
+icon = "🏠"
+path = "app.py"
+
+[[items]]
+type = "section"
+label = "Ferramenta"
+
+[[items]]
+type = "page"
+label = "Sistema Preditivo"
+icon = "🤖"
+path = "pages/predict.py"
+
+
+[[items]]
+type = "page"
+label = "Painel Analítico"
+icon = "📊"
+path = "pages/data.py"
+
+
+[[items]]
+type = "section"
+label = "Admin"
+
+[[items]]
+type = "page"
+label = "Treinar Modelo"
+icon = "⚙️"
+path = "pages/train.py"

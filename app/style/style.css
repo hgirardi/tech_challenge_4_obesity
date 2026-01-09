@@ -1,0 +1,46 @@
+[data-testid="stSidebarHeader"], [data-testid="stSidebarNav"] {
+    display: none;
+}
+
+[data-testid="stSidebar"] a[aria-current="page"] {
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.35rem 0.6rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-testid="stWidgetLabel"] p{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.metric-card {
+    background-color: #f0f2f6;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.insight-box {
+    background-color: #e7f3ff;
+    padding: 15px;
+    border-left: 5px solid #2196F3;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* .stMain .stElementContainer {
+  margin-bottom: 30px;
+}
+
+/* Adicionando borda superior ao cabeçalho para ajudar na separação dos containers 
+.stHeading {
+  border-top: 1px solid black;
+}
+
+
+/* Remove a borda superior do primeiro cabeçalho para ficar visualmente melhor 
+.first_subheader {
+  border-top: none;
+} */
