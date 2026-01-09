@@ -305,7 +305,7 @@ class Model:
             logger.warning(f":✅ validar_prob(): dados processados -> features criadas.")
             #logger.info(dados)
 
-        proba = float(self.pipe.predict_proba(dados)[:, 1])
+        proba = float(self.pipe.predict_proba(dados)[0, 1])
         logger.info(f"✅ validar_prob(): proba criada: {proba} ")
         #logger.info(f"proba: {type(proba)} / {type(self.threshold)}")
         pred = int(proba >= float(self.threshold))
