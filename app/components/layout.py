@@ -6,18 +6,18 @@ import streamlit as st
 import tomllib
 
 
-def _load_css(path: str = "style/style.css") -> None:
+def _load_css(path: str = "app/style/style.css") -> None:
     css_path = Path(path)
     if css_path.exists():
         st.markdown(f"<style>{css_path.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
 
 
-def _load_nav(path: str = "components/nav.toml") -> dict:
+def _load_nav(path: str = "app/components/nav.toml") -> dict:
     with open(path, "rb") as f:
         return tomllib.load(f)
 
 
-def layout(page_title: str, nav_path: str = "components/nav.toml") -> None:
+def layout(page_title: str, nav_path: str = "app/components/nav.toml") -> None:
     st.set_page_config(page_title=page_title, layout="wide")
 
     # Carregar CSS personalizado
